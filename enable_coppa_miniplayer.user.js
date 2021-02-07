@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Bypass COPPA Miniplayer
 // @namespace    http://tampermonkey.net/
-// @version      1.2.5
+// @version      1.2.6
 // @description  Re-enable YouTube Miniplayer on COPPA-flagged (supposedly kids) videos.
 // @author       jaytohe
 // @match        https://www.youtube.com/*
@@ -79,6 +79,11 @@
       };
       /* END OF UNBLOCK FUNCTION */
       minibtn.addEventListener("click", unblock, false); //hijack miniplayer button.
+      addEventListener("keydown", function(event) {
+          if (event.keyCode === 73) {
+              unblock.call();
+          }
+      }, false);
       stop(waitforvid); //cease checking if any video has loaded up.
       }
   }
