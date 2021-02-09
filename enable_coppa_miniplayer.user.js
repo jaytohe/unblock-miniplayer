@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Bypass COPPA Miniplayer
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/jaytohe/
 // @version      1.2.6
 // @description  Re-enable YouTube Miniplayer on COPPA-flagged (supposedly kids) videos.
 // @author       jaytohe
